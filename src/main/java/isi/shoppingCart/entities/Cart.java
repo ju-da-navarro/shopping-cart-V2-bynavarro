@@ -38,7 +38,9 @@ public class Cart {
 
             if (item.getProduct().getId() == product.getId()) {
                 item.decreaseQuantity();
-                items.remove(item);
+                if (item.getQuantity() == 0){
+                    items.remove(item);
+                }
                 return;
             }
         }
