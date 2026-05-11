@@ -14,6 +14,7 @@ import isi.shoppingCart.usecases.ports.CartRepository;
 import isi.shoppingCart.usecases.ports.CustomerRepository;
 import isi.shoppingCart.usecases.ports.ProductRepository;
 import isi.shoppingCart.usecases.ports.PurchaseRepository;
+
 import java.util.List;
 
 public class ShoppingCartApp {
@@ -24,6 +25,8 @@ public class ShoppingCartApp {
     private AgregarProductoAlCarritoUseCase agregarProductoAlCarritoUseCase;
     private ConfirmarCompraUseCase confirmarCompraUseCase;
     private EliminarProductoCarrito eliminarProductoCarrito;
+    private AñadirDisponibilidadProductoUseCase añadirDisponibilidadProductoUseCase;
+    private VaciarCarritoUseCase vaciarCarritoUseCase;
 
     public ShoppingCartApp() {
         productRepository = new InMemoryProductRepository();
@@ -33,6 +36,8 @@ public class ShoppingCartApp {
         agregarProductoAlCarritoUseCase = new AgregarProductoAlCarritoUseCase(productRepository, cartRepository);
         confirmarCompraUseCase = new ConfirmarCompraUseCase(cartRepository, customerRepository, purchaseRepository);
         eliminarProductoCarrito = new EliminarProductoCarrito(productRepository, cartRepository);
+        añadirDisponibilidadProductoUseCase = new AñadirDisponibilidadProductoUseCase(productRepository);
+        vaciarCarritoUseCase = new VaciarCarritoUseCase(cartRepository);
 
         cargarDatosIniciales();
     }
@@ -42,13 +47,19 @@ public class ShoppingCartApp {
                            CustomerRepository customerRepository,
                            PurchaseRepository purchaseRepository,
                            AgregarProductoAlCarritoUseCase agregarProductoAlCarritoUseCase,
-                           ConfirmarCompraUseCase confirmarCompraUseCase) {
+                           ConfirmarCompraUseCase confirmarCompraUseCase,
+                           EliminarProductoCarrito eliminarProductoCarrito,
+                           AñadirDisponibilidadProductoUseCase añadirDisponibilidadProductoUseCase,
+                           VaciarCarritoUseCase vaciarCarritoUseCase) {
         this.productRepository = productRepository;
         this.cartRepository = cartRepository;
         this.customerRepository = customerRepository;
         this.purchaseRepository = purchaseRepository;
         this.agregarProductoAlCarritoUseCase = agregarProductoAlCarritoUseCase;
         this.confirmarCompraUseCase = confirmarCompraUseCase;
+        this.eliminarProductoCarrito = eliminarProductoCarrito;
+        this.añadirDisponibilidadProductoUseCase = añadirDisponibilidadProductoUseCase;
+        this.vaciarCarritoUseCase = vaciarCarritoUseCase;
     }
 
     private void cargarDatosIniciales() {
@@ -122,6 +133,10 @@ public class ShoppingCartApp {
     public OperationResult deleteProductOnCart(CartItem cartItem){
         return eliminarProductoCarrito.execute(cartItem);
     }
+
+    public  OperationResult anadirInventarioAlProductoUseCase(int productId) { return añadirDisponibilidadProductoUseCase.execute(productId);}
+
+    public OperationResult vaciarCarro(){return vaciarCarritoUseCase.execute();}
 
     public OperationResult confirmPurchase() {
         return confirmarCompraUseCase.execute();

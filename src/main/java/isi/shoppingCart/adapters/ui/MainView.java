@@ -85,7 +85,11 @@ public class MainView {
         });
 
         Button emptyCartButton = new Button("Vaciar carrito");
-        emptyCartButton.setOnAction(event -> showMessage("Por implementar"));
+        emptyCartButton.setOnAction(event -> {
+            shoppingCartApp.vaciarCarro();
+            refreshCatalog();
+            refreshCart();
+        });
 
         HBox cartButtons = new HBox(10);
         cartButtons.getChildren().addAll(confirmButton, emptyCartButton);
@@ -127,7 +131,10 @@ public class MainView {
             Region spacer = new Region();
             HBox.setHgrow(spacer, Priority.ALWAYS);
 
-            increaseButton.setOnAction(event -> showMessage("Por implementar"));
+            increaseButton.setOnAction(event -> {
+                shoppingCartApp.anadirInventarioAlProductoUseCase(product.getId());
+                refreshCatalog();
+            });
 
             addButton.setOnAction(event -> {
                 OperationResult result = shoppingCartApp.addProductToCart(product.getId());

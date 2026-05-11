@@ -1,0 +1,106 @@
+<mxfile host="Electron">
+  <diagram name="Página-1" id="QAQu5_WCkpZkDcw1r0bV">
+    <mxGraphModel dx="981" dy="596" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="P0Y7VduSshtD-vRrr1SI-12" edge="1" parent="1" source="P0Y7VduSshtD-vRrr1SI-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="P0Y7VduSshtD-vRrr1SI-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P0Y7VduSshtD-vRrr1SI-2" parent="1" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;" value="&lt;b&gt;&lt;u&gt;AumentarDisponibilidad-&lt;/u&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;ProductoUseCase&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="170" x="480" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="P0Y7VduSshtD-vRrr1SI-3" parent="1" style="shape=umlBoundary;whiteSpace=wrap;html=1;" value="&lt;b&gt;&lt;u&gt;MainView&lt;/u&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;Class&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="100" x="250" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="P0Y7VduSshtD-vRrr1SI-4" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="Cliente" vertex="1">
+          <mxGeometry height="60" width="30" x="80" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="P0Y7VduSshtD-vRrr1SI-6" parent="1" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" value="Producto" vertex="1">
+          <mxGeometry height="80" width="80" x="860" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="P0Y7VduSshtD-vRrr1SI-10" edge="1" parent="1" source="P0Y7VduSshtD-vRrr1SI-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.011;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" target="P0Y7VduSshtD-vRrr1SI-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P0Y7VduSshtD-vRrr1SI-11" edge="1" parent="1" source="P0Y7VduSshtD-vRrr1SI-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="P0Y7VduSshtD-vRrr1SI-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P0Y7VduSshtD-vRrr1SI-13" edge="1" parent="1" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" value="1. Usuario presiona el boton [+]&amp;nbsp;&lt;div&gt;junto al producto a aumentar&lt;/div&gt;">
+          <mxGeometry relative="1" width="100" y="40" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points" />
+            <mxPoint x="140" y="250" as="sourcePoint" />
+            <mxPoint x="240" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P0Y7VduSshtD-vRrr1SI-14" edge="1" parent="1" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" value="2. Enviar Solicitud&amp;nbsp;&lt;div&gt;AumentarDisponibilidad(productId)&lt;/div&gt;">
+          <mxGeometry relative="1" width="100" y="30" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points" />
+            <mxPoint x="380" y="249.17" as="sourcePoint" />
+            <mxPoint x="480" y="249.17" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P0Y7VduSshtD-vRrr1SI-15" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;endArrow=classic;endFill=1;entryX=0.825;entryY=0.234;entryDx=0;entryDy=0;entryPerimeter=0;" target="P0Y7VduSshtD-vRrr1SI-2" value="3. Valida Existencia Producto&lt;div&gt;en el repositorio&lt;/div&gt;">
+          <mxGeometry relative="1" width="100" x="-0.0007" y="20" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="540" y="200" />
+              <mxPoint x="620" y="200" />
+              <mxPoint x="620" y="263" />
+              <mxPoint x="620" y="263" />
+            </Array>
+            <mxPoint x="540" y="250" as="sourcePoint" />
+            <mxPoint x="620" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P0Y7VduSshtD-vRrr1SI-16" edge="1" parent="1" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" value="4. Solicita incrementar cantidad">
+          <mxGeometry relative="1" width="100" x="0.2" y="20" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points" />
+            <mxPoint x="710" y="270" as="sourcePoint" />
+            <mxPoint x="810" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P0Y7VduSshtD-vRrr1SI-18" edge="1" parent="1" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=classic;endSize=8;startSize=8;rounded=0;endFill=0;" value="5. Devuelve Producto Modificado">
+          <mxGeometry relative="1" width="100" y="-20" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points" />
+            <mxPoint x="710" y="329.43" as="sourcePoint" />
+            <mxPoint x="810" y="329.43" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P0Y7VduSshtD-vRrr1SI-19" edge="1" parent="1" source="P0Y7VduSshtD-vRrr1SI-2" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;endArrow=none;endFill=0;exitX=0.259;exitY=0.946;exitDx=0;exitDy=0;exitPerimeter=0;startArrow=classic;startFill=1;" target="P0Y7VduSshtD-vRrr1SI-2" value="6. Persiste el Producto modificado&lt;div&gt;en el repositorio&lt;/div&gt;">
+          <mxGeometry relative="1" width="100" x="-0.0155" y="-30" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="525" y="335" />
+              <mxPoint x="525" y="390" />
+              <mxPoint x="605" y="390" />
+            </Array>
+            <mxPoint x="525" y="470" as="sourcePoint" />
+            <mxPoint x="605" y="483" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P0Y7VduSshtD-vRrr1SI-20" edge="1" parent="1" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=classic;endSize=8;startSize=8;rounded=0;endFill=0;" value="7. Enviar mensaje finalización&lt;div&gt;exitosa&lt;/div&gt;">
+          <mxGeometry relative="1" width="100" y="-30" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points" />
+            <mxPoint x="380" y="330" as="sourcePoint" />
+            <mxPoint x="480" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P0Y7VduSshtD-vRrr1SI-21" edge="1" parent="1" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=classic;endSize=8;startSize=8;rounded=0;endFill=0;" value="8. Usuario Obseva cambio en&amp;nbsp;&lt;div&gt;el inventario de su producto&lt;/div&gt;">
+          <mxGeometry relative="1" width="100" y="-40" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points" />
+            <mxPoint x="140" y="340" as="sourcePoint" />
+            <mxPoint x="240" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

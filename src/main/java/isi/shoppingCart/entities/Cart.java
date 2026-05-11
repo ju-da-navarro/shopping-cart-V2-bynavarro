@@ -15,6 +15,10 @@ public class Cart {
         return Collections.unmodifiableList(items);
     }
 
+    public void ClearAll(){
+        items.clear();
+    }
+
     public void addProduct(Product product) {
         int i;
 
